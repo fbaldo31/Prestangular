@@ -2,8 +2,7 @@
 
 Access to Prestashop API for building modern frontend app to interact with your Prestashop webservice.
 
-<img src="https://assets.prestashop2.com/en/system/files/filedepot/15/media_1_prestashop-vertical.png" width="160" style="margin-left:150px">
-<img src="https://angular.io/assets/images/logos/angular/angular.svg" width="180" style="margin-left:40px">
+<img src="https://assets.prestashop2.com/en/system/files/filedepot/15/media_1_prestashop-vertical.png" width="160" style="margin-left:150px"><img src="https://angular.io/assets/images/logos/angular/angular.svg" width="180" style="margin-left:40px">
 
 ## Prerequisites
 
