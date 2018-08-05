@@ -2,6 +2,9 @@
 
 Access to Prestashop API for building modern frontend app to interact with your Prestashop webservice.
 
+<img src="https://assets.prestashop2.com/en/system/files/filedepot/15/media_1_prestashop-vertical.png" width="160" style="margin-left:150px">
+<img src="https://angular.io/assets/images/logos/angular/angular.svg" width="180" style="margin-left:40px">
+
 ## Prerequisites
 
 - Prestashop 1.7.x (not tested with previous version but should work)
@@ -23,21 +26,32 @@ import {
     CatalogModule
 } from 'prestangular';
 
-ShopModule.forRoot({
-    // You must create one in the backoffice (webservice part)
-    API_KEY: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
-    // We strongly recommend to setup a special key for images with only reading rights
-    IMG_KEY: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
-    // You will find it in app/config/paramters.php
-    COOKIE_KEY: 'X0ynVX0ynVX0ynVX0ynVX0ynVX0ynVX0ynVX0ynVX0ynVX0ynVX0ynVX',
-    DEFAULT_LANG: '1', // Optional: 1 used as default
-    DOMAIN:  'http://localhost', // Url of the shop
-    PATH: '/prestashop/', // Optional: / used as default
-}),
-CatalogModule.forRoot(),
-CustomerModule.forRoot(),
-CartModule.forRoot(),
-OrderModule.forRoot(),
+@NgModule({
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        ShopModule.forRoot({
+            // You must create one in the backoffice (webservice part)
+            API_KEY: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+            // We strongly recommend to setup a special key for images with only reading rights
+            IMG_KEY: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+            // You will find it in app/config/paramters.php
+            COOKIE_KEY: 'X0ynVX0ynVX0ynVX0ynVX0ynVX0ynVX0ynVX0ynVX0ynVX0ynVX0ynVX',
+            DEFAULT_LANG: '1', // Optional: 1 used as default
+            DOMAIN:  'http://localhost', // Url of the shop
+            PATH: '/prestashop/', // Optional: / used as default
+        }),
+        CatalogModule.forRoot(),
+        CustomerModule.forRoot(),
+        CartModule.forRoot(),
+        OrderModule.forRoot()
+    ],
+    bootstrap: [AppComponent],
+})
+export class AppModule { }
 ```
 
 ## Api usage
