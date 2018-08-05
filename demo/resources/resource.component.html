@@ -1,0 +1,81 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+</div>
+<nav>
+  <ul>
+    <li><a href [routerLink]="['products']">Produits</a></li>
+    <li><a href [routerLink]="['register']">Inscription</a></li>
+    <li><a href [routerLink]="['login']">login</a></li>
+    <li><a href [routerLink]="['search', 'robe']">recherche</a></li>
+    <li><a href [routerLink]="['cart']">Panier</a></li>
+    <li><a href [routerLink]="['account']">Mon compte</a></li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
+
+<!-- <pre>
+  <h3>{{data.products.length}} Products</h3>
+  <ul *ngIf="data.products">
+    <li *ngFor="let data of data.products">
+      {{data|json}}
+    </li>
+  </ul>
+</pre>
+
+<!-- <pre>
+  <ul *ngIf="data.productsOptions">
+    <li *ngFor="let data of data.productsOptions">
+      {{data|json}}
+    </li>
+  </ul>
+</pre> -->
+
+<!-- <pre>
+  <h3>{{data.productsFeatures.length}} Features</h3>
+  <ul *ngIf="data.productsFeatures.length">
+    <li *ngFor="let data of data.productsFeatures">
+      {{data|json}}
+    </li>
+  </ul>
+</pre> -->
+
+<!-- <pre>
+  <h3>{{data.categories.length}} Categories</h3>
+  <ul *ngIf="data.categories.length">
+    <li *ngFor="let data of data.categories">
+      {{data|json}}
+    </li>
+  </ul>
+</pre> -->
+
+<pre>
+  <h3>{{data.countries.length}} Countries</h3>
+  <ul *ngIf="data.countries.length">
+    <li *ngFor="let data of data.countries">
+      {{data|json}}
+    </li>
+  </ul>
+</pre>
+<!--
+<pre>
+  <ul *ngIf="data.carts">
+  <h3>{{data.carts.length}} Carts</h3>
+    <li *ngFor="let data of data.carts">
+      {{data|json}}
+    </li>
+  </ul>
+</pre> -->
+
+<!-- <pre>
+  <ul *ngIf="data.orders">
+  <h3>{{data.orders.length}} O    rders</h3>
+    <li *ngFor="let data of data.orders">
+      {{data|json}}
+    </li>
+  </ul>
+</pre> -->
+
